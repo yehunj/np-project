@@ -28,7 +28,7 @@ def main():
 
     correct_number_of_edges = n * (n - 1) // 2
     if m != correct_number_of_edges:
-        raise ValueError('Invalid number of edges. Graph will not be complete.')
+        raise ValueError('Invalid number of edges. Graph is not complete.')
     
     graph = {}
 
