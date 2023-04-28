@@ -1,4 +1,6 @@
 import itertools
+import time
+
 
 def tsp(graph):
     vertices = list(graph.keys())
@@ -24,6 +26,7 @@ def get_cycle_length(graph, cycle):
 
 
 def main():
+    start_time = time.time()
     n, m = map(int, input().split())
 
     correct_number_of_edges = n * (n - 1) // 2
@@ -45,6 +48,7 @@ def main():
     cycle_length = int(cycle_length)
     print(cycle_length)
     print(' '.join(cycle))
+    print('Time: ', time.time() - start_time)
 
 
 if __name__ == '__main__':
