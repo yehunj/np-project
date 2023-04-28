@@ -1,0 +1,1 @@
+To run the test script for our program, please run the shell script file. The shell script will automatically run each test case automatically. Please note that the last test case will run for over twenty minutes.
