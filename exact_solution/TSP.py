@@ -1,5 +1,4 @@
 def tsp(graph):
-    # Generate all possible permutations of the vertices
     vertices = list(graph.keys())
     permutations = get_permutations(vertices)
 
@@ -10,6 +9,8 @@ def tsp(graph):
         if cycle_length < shortest_length:
             shortest_length = cycle_length
             shortest_cycle = cycle
+
+    shortest_cycle.append(shortest_cycle[0])
 
     return shortest_length, shortest_cycle
 
