@@ -1,3 +1,9 @@
+"""
+    Our implemantation of the approximate solution to the TSP problem using the nearest neighbor algorithm.
+    Sources used: http://people.hsc.edu/faculty-staff/robbk/Math111/Lectures/Fall%202017/Lecture%2031%20-%20The%20Nearest-Neighbor%20Algorithm.pdf
+    Authors: Josh Kuesters and Ye Hun Joo
+"""
+
 import math
 import time
 
