@@ -1,4 +1,5 @@
 import math
+import time
 
 def nearest_neighbor_tsp(graph):
     start_vertex = list(graph.keys())[0]
@@ -17,6 +18,7 @@ def nearest_neighbor_tsp(graph):
 
 
 def main():
+    start_time = time.time()
     n, m = map(int, input().split())
 
     correct_number_of_edges = n * (n - 1) // 2
@@ -38,6 +40,7 @@ def main():
     total_distance = int(total_distance)
     print(total_distance)
     print(' '.join(path))
+    print('Time: ', time.time() - start_time)
     pass
 
 if __name__ == '__main__':
