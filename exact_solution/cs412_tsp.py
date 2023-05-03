@@ -8,17 +8,21 @@ import itertools
 import time
 
 def tsp(graph):
+    # Get all permutations of the vertices.
     vertices = list(graph.keys())
     permutations = itertools.permutations(vertices)
 
     shortest_cycle = None
     shortest_length = float('inf')
+    # For each permutation, get the cycle length and compare it to the shortest cycle length.
     for cycle in permutations:
         cycle_length = get_cycle_length(graph, cycle)
+        # If the cycle length is shorter than the shortest cycle length, update the shortest cycle length and cycle.
         if cycle_length < shortest_length:
             shortest_length = cycle_length
             shortest_cycle = cycle
 
+    # Add the first vertex to the end of the cycle to complete the cycle.
     shortest_cycle += shortest_cycle[:1]
     return shortest_length, shortest_cycle
 
@@ -26,6 +30,7 @@ def tsp(graph):
 def get_cycle_length(graph, cycle):
     length = 0
     for i in range(len(cycle)):
+        # Add the distance between the current vertex and the next vertex in the cycle.
         length += graph[cycle[i]][cycle[(i+1)%len(cycle)]]
     return length
 
