@@ -1,5 +1,6 @@
 """
-    Our implemantation of the approximate solution to the TSP problem using the nearest neighbor algorithm.
+    Our implemantation of the approximate solution to the TSP problem
+    using the nearest neighbor algorithm which is greedy.
     Sources used: http://people.hsc.edu/faculty-staff/robbk/Math111/Lectures/Fall%202017/Lecture%2031%20-%20The%20Nearest-Neighbor%20Algorithm.pdf
     Authors: Josh Kuesters and Ye Hun Joo
 """
