@@ -13,12 +13,17 @@ def nearest_neighbor_tsp(graph):
     unvisited_vertices = set(graph.keys())
     unvisited_vertices.remove(start_vertex)
     path = [start_vertex]
+
+    # While there are still unvisited vertices, find the nearest neighbor and add it to the path.
     while unvisited_vertices:
+        # Find the nearest neighbor using a lambda function which returns the vertex with the minimum distance from the current vertex.
         nearest_neighbor = min(unvisited_vertices, key=lambda vertex: graph[current_vertex][vertex])
         path.append(nearest_neighbor)
+        # Remove the nearest neighbor from the set of unvisited vertices.
         unvisited_vertices.remove(nearest_neighbor)
         current_vertex = nearest_neighbor
     path.append(start_vertex)
+    # Calculate the total distance of the path.
     total_distance = sum([graph[path[i]][path[i+1]] for i in range(len(path)-1)])
     return path, total_distance
 
